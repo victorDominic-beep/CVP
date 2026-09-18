@@ -18,7 +18,7 @@ export function Brand() {
   )
 }
 
-export function Navigation({ menuOpen, onToggle, onNavigate }) {
+export function Navigation({ menuOpen, onToggle, onNavigate, activePage = 'top' }) {
   return (
     <header className="navbar">
       <Brand />
@@ -27,7 +27,7 @@ export function Navigation({ menuOpen, onToggle, onNavigate }) {
       </button>
       <nav className={menuOpen ? 'nav-links nav-open' : 'nav-links'}>
         {navItems.map(([label, href]) => (
-          <a key={href} href={`#${href}`} onClick={onNavigate}>{label}</a>
+          <a className={activePage === href ? 'active' : ''} key={href} href={href === 'contact' ? '/contact' : href === 'process' ? '/pricing' : `/#${href}`} onClick={onNavigate}>{label}</a>
         ))}
       </nav>
       <div className="nav-actions">

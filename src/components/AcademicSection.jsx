@@ -12,17 +12,14 @@ const workflows = [
 
 export default function AcademicSection() {
   const [openWorkflow, setOpenWorkflow] = useState(0)
-  const [isPaused, setIsPaused] = useState(false)
 
   useEffect(() => {
-    if (isPaused) return undefined
-
     const carouselTimer = window.setInterval(() => {
       setOpenWorkflow((current) => (current + 1) % workflows.length)
-    }, 4500)
+    }, 1000)
 
     return () => window.clearInterval(carouselTimer)
-  }, [isPaused])
+  }, [])
 
   return (
     <section className="academic-section">
@@ -31,14 +28,14 @@ export default function AcademicSection() {
         <h2>Secure academic verification.<br />built for every workflow.</h2>
         <p>CVP standardizes how academic transcripts and certificates are routed and verified.</p>
       </div>
-      <div className="academic-content section-grid" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
+      <div className="academic-content section-grid">
         <div className="workflow-tabs" aria-label="Tailored solution workflows">
           {workflows.map(([label, description, Icon], index) => {
             const isOpen = openWorkflow === index
 
             return (
               <div className={`workflow-item ${isOpen ? 'active' : ''}`} key={label}>
-                <button type="button" aria-expanded={isOpen} onClick={() => setOpenWorkflow(isOpen ? -1 : index)}>
+                <button type="button" aria-expanded={isOpen} onClick={() => setOpenWorkflow(index)}>
                   <span>{label}</span>
                   <span className="workflow-action"><Icon size={16} aria-hidden="true" /><ChevronDown size={15} aria-hidden="true" /></span>
                 </button>

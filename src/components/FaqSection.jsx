@@ -10,7 +10,7 @@ const faqs = [
 
 export default function FaqSection({ openFaq, onToggle }) {
   return (
-    <section className="faq-section">
+    <section className="faq-section" id="faq">
       <SectionHeading eyebrow="FAQs" title="Got questions? We have answers" />
       <div className="faq-list">
         {faqs.map(([question, hasAnswer], index) => (

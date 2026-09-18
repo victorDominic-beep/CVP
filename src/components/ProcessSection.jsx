@@ -18,7 +18,7 @@ export default function ProcessSection() {
         {steps.map(([imageKey, title, text], index) => (
           <div className="process-step" key={title}>
             <span className="step-number">0{index + 1}</span>
-            <img className="step-icon" src={images[imageKey]} alt={`${title} icon placeholder`} />
+            <div className="step-icon"><img src={images[imageKey]} alt={`${title} icon`} /></div>
             <h4>{title}</h4>
             <p>{text}</p>
           </div>
