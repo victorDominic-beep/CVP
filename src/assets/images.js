@@ -1,0 +1,18 @@
+export const images = {
+  logo: '/placeholders/logo.svg',
+  heroIllustration: '/placeholders/hero-illustration.png',
+  aboutImage: '/placeholders/about-image.png',
+  flagsImage: '/placeholders/flags-image.png',
+  testimonialAvatar: '/placeholders/testimonial-avatar.png',
+  logoUniLagos: '/placeholders/logo-uni-lagos.png',
+  logoUniIlorin: '/placeholders/logo-uni-ilorin.png',
+  logoLeadCity: '/placeholders/logo-lead-city.png',
+  logoWaec: '/placeholders/logo-waec.png',
+  iconDigitalPortal: '/placeholders/icon-digital-portal.svg',
+  iconCertificateCheck: '/placeholders/icon-certificate-check.svg',
+  iconInstantNotifications: '/placeholders/icon-instant-notifications.svg',
+  iconStepSubmit: '/placeholders/icon-step-submit.svg',
+  iconStepRoute: '/placeholders/icon-step-route.svg',
+  iconStepTrack: '/placeholders/icon-step-track.svg',
+  iconStepAnswer: '/placeholders/icon-step-answer.svg',
+}
